@@ -75,9 +75,9 @@ img {
     cursor: pointer;
     display: none;
 }
-
+ 
 .submenu {
-    position: relative;
+    max-width: none;
 }
 
 .submenu #carrito {
@@ -93,7 +93,7 @@ img {
     z-index: 100;
     background-color: #4E4B5076;
     padding: 20px;
-    min-height: 400px; 
+    min-height: 400px;
 }
 
 table {
@@ -200,6 +200,14 @@ th, td {
     margin-bottom: 15px;
 }
 
+.product a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
 .precio {
     font-weight: 800;
 }
@@ -230,3 +238,78 @@ th, td {
     font-size: 16px;
     color: #111111;
 }
+
+.footer {
+    padding: 50px 0;
+    background-color: #111111;
+}
+
+.footer li {
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos generales del contenedor */
+.link {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+  }
+  
+  .link h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  /* Lista */
+  .link ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .link ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Íconos */
+  .link ul li img {
+    width: 24px; /* Tamaño del ícono */
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 35%;
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+  }
+  
+  /* Enlaces */
+  .link ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .link ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* Texto general */
+  .link ul li span {
+    color: #f5f5f5;
+    font-size: 1em;
+  }
+  
