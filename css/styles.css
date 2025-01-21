@@ -216,6 +216,8 @@ img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .footer-content ul li a {
