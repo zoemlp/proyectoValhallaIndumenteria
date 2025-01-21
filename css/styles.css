@@ -153,12 +153,12 @@ img {
 .product .image-group {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
 .product img {
-    width: 250px;
+    width: 150px;
     height: auto;
     object-fit: cover;
 }
@@ -172,6 +172,20 @@ img {
 .product p {
     font-size: 1rem;
     color: #555;
+}
+
+.product a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product a:hover {
+    background-color: #444;
 }
 
 /* Footer Styles */
@@ -202,8 +216,6 @@ img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
-    border-radius: 10px;
-    background-color: #fff;
 }
 
 .footer-content ul li a {
@@ -220,4 +232,3 @@ img {
     margin-top: 20px;
     font-size: 0.9rem;
 }
-
