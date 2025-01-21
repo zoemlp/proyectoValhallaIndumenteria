@@ -99,10 +99,12 @@ img {
     position: relative;
 }
 
-.submenu img {
-    background-color: #fff;
+#img-carrito {
     width: 30px;
-    border-radius: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    filter: invert(1); /* Cambia el icono a blanco */
 }
 
 .submenu #carrito {
@@ -116,9 +118,9 @@ img {
     backdrop-filter: blur(10px);
     top: 100%;
     z-index: 1;
-    background-color: #4E4B5076;
+    background-color: #fff;
     padding: 20px;
-    min-height: 400px;
+    min-width: 400px;
 }
 
 table {
@@ -126,7 +128,7 @@ table {
 }
 
 th, td {
-    color: #fff;
+    color: #111;
 }
 
 .borrar {
