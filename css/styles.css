@@ -41,10 +41,10 @@ img {
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Alinea los elementos de forma equilibrada */
+    justify-content: space-between;
     width: 100%;
-    background-color: #000; /* Fondo negro para el menú */
-    padding: 0 20px; /* Espaciado a ambos lados */
+    background-color: #000;
+    padding: 0 20px;
 }
 
 .menu .logo {
@@ -52,7 +52,7 @@ img {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: auto; /* Envía el logo a la izquierda */
+    margin-right: auto;
 }
 
 .menu .navbar ul {
@@ -78,12 +78,6 @@ img {
     border-radius: 5px;
 }
 
-.menu .navbar ul li {
-    position: relative;
-}
-
-
-/* Hide checkbox input */
 #menu {
     display: none;
 }
@@ -143,6 +137,7 @@ th, td {
     font-weight: 800;
     cursor: pointer;
 }
+
 /* Header Content */
 .header-content {
     margin-top: 60px;
@@ -169,10 +164,11 @@ th, td {
     object-fit: cover;
 }
 
-/* Product Section */
+/* Sección de Productos */
 .products {
     text-align: center;
     padding: 50px 20px;
+    margin-top: 80px;
 }
 
 .products h2 {
@@ -187,40 +183,78 @@ th, td {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
+    align-items: start;
 }
 
 .product {
-    text-align: center;
+    width: 100%;
+    max-width: 350px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.product .image-group {
+/* Carrusel de imágenes */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    align-items: center;
 }
 
-.product img {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
+.carousel button.prev {
+    left: 10px;
 }
 
-.product h3 {
-    font-size: 1.5rem;
-    color: #111;
-    margin-bottom: 10px;
+.carousel button.next {
+    right: 10px;
 }
 
-.product p {
-    font-size: 1rem;
-    color: #555;
+.carousel button:hover {
+    background: rgba(0, 0, 0, 0.7);
 }
 
+/* Botón Agregar al carrito */
 .product a {
     display: inline-block;
     padding: 10px 20px;
@@ -229,6 +263,7 @@ th, td {
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .product a:hover {
