@@ -316,3 +316,19 @@ th, td {
     margin-top: 20px;
     font-size: 0.9rem;
 }
+
+/* Media Queries
+@media (max-width: 768px) {
+    .products-content {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel {
+        height: 250px;
+    }
+
+    .carousel img {
+        height: 250px;
+    }
+} */
+
