@@ -1,46 +1,20 @@
-const carrito = document.getElementById('carrito');
-const elementos1 = document.getElementById('lista-1');
+document.querySelectorAll('.agregar-carrito').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
 
-const lista = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+        const productId = this.getAttribute('data-id');
+        const selectedColor = document.getElementById('color').value;
+        const selectedTalle = document.getElementById('talle').value;
 
-cargarEventListeners();
+        const productInfo = {
+            id: productId,
+            color: selectedColor,
+            talle: selectedTalle
+        };
 
-function cargarEventListeners() {
-    elementos1.addEventListener('click', comprarElemento);
-    carrito.addEventListener('click', eliminarElemento);
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
-}
+        console.log('Producto agregado:', productInfo);
+        // Acá podés agregarlo al carrito almacenándolo en localStorage o en tu sistema
+    });
+});
 
-function comprarElemento(e) {
-    e.preventDefault();
-    if(e.target.classList.contains('agregar-carrito')) {
-        const elemento = e.target.parentElement.parentElement;
-        leerDatosElemento(elemento);
-    }
-}
 
-function leerDatosElemento(elemento) {
-    const infoElemento = {
-        imagen: elemento.querySelector('img').src,
-        titulo: elemento.querySelector('h3').textContent,
-        precio: elemento.querySelector('.precio').textContent,
-        id: elemento.querySelector('a').getAttribute('data-id')
-    }
-    insertarCarrito(infoElemento);
-}
-
-function insertarCarrito(elemento) {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-        <td>
-            <img src="${elemento.imagen}" width=100 />
-        </td>
-        <td>${elemento.titulo}</td>
-        <td>${elemento.precio}</td>
-        <td>
-            <a href="#" class="borrar-elemento" data-id="${elemento.id}">X</a>
-        </td>
-    `;
-    lista.appendChild(row);
-}
